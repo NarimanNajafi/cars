@@ -1,12 +1,12 @@
-import { creatSlice } from 'reduxjd/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-const formSlice = creatSlice({
+const formSlice = createSlice({
   name: 'form',
   initialState: {
     name: '',
     cost: 0,
   },
-  reducer: {
+  reducers: {
     changeName(state, action) {
       state.name = action.payload;
     },
@@ -16,5 +16,5 @@ const formSlice = creatSlice({
   },
 });
 
-export const { chnageName, changeCost } = formSlice.action;
+export const { changeName, changeCost } = formSlice.actions;
 export const formReducer = formSlice.reducer;
