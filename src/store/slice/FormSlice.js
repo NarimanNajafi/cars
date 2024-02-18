@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { addCar } from './CarSlice';
 
 const formSlice = createSlice({
   name: 'form',
