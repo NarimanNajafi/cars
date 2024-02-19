@@ -15,6 +15,12 @@ const formSlice = createSlice({
       state.cost = action.payload;
     },
   },
+  extraReducers(bulider) {
+    bulider.addCase(addCar, (state, action) => {
+      state.name = '';
+      state.cost = 0;
+    });
+  },
 });
 
 export const { changeName, changeCost } = formSlice.actions;
